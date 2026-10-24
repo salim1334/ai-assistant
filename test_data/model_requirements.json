@@ -1,0 +1,12 @@
+{
+  "task_type": "classification",
+  "data_size": "medium",
+  "interpretability": "high",
+  "performance_priority": "accuracy",
+  "deployment_environment": "cloud",
+  "training_time_constraint": "medium",
+  "available_hardware": [
+    "cpu",
+    "standard_gpu"
+  ]
+}

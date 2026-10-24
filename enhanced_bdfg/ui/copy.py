@@ -1,0 +1,63 @@
+"""Plain-language UI copy (English / Amharic)."""
+
+STRINGS = {
+    "en": {
+        "title": "Your business assistant",
+        "getting_ready": "Getting ready",
+        "finding": "Finding a helper that fits this computer…",
+        "downloading": "Downloading a helper that fits this computer… this happens once.",
+        "need_ollama": "I can still take notes without a live model. Install Ollama to talk with a helper on this computer.",
+        "install": "Install Ollama",
+        "continue": "Continue",
+        "setup_title": "Let's set up your assistant",
+        "setup_hint": "Answer in your own words. One question at a time.",
+        "send": "Send",
+        "start": "Start my assistant",
+        "home_title": "Your assistant",
+        "remember": "What I remember",
+        "next": "Next moves",
+        "chat_placeholder": "Type here…",
+        "cloud": "Use a cloud key (optional)",
+        "provider": "Provider",
+        "api_key": "API key",
+        "save_key": "Save key",
+        "language": "Language",
+        "chips_dark": "Which areas are thin?",
+        "chips_restock": "What should we restock?",
+        "chips_dispatch": "Should a van go out?",
+        "chips_kiosk": "How do I add a kiosk?",
+        "working_offline": "Working without a live model until a key or Ollama is set.",
+    },
+    "am": {
+        "title": "የንግድ ረዳትዎ",
+        "getting_ready": "እየተዘጋጀ ነው",
+        "finding": "ለዚህ ኮምፒዩተር የሚስማማ ረዳት እየተፈለገ ነው…",
+        "downloading": "አንድ ጊዜ ብቻ የሚወርድ ረዳት እየወረደ ነው…",
+        "need_ollama": "ያለ ሞዴል ማስታወሻ መያዝ እችላለሁ። በዚህ ኮምፒዩተር ለመነጋገር Ollama ይጫኑ።",
+        "install": "Ollama ይጫኑ",
+        "continue": "ቀጥል",
+        "setup_title": "ረዳትዎን እናዘጋጅ",
+        "setup_hint": "በራስዎ ቃላት ይመልሱ። በአንድ ጊዜ አንድ ጥያቄ።",
+        "send": "ላክ",
+        "start": "ረዳቴን ጀምር",
+        "home_title": "ረዳትዎ",
+        "remember": "የማስታውሰው",
+        "next": "ቀጣይ እርምጃዎች",
+        "chat_placeholder": "እዚህ ይጻፉ…",
+        "cloud": "የክላውድ ቁልፍ (አማራጭ)",
+        "provider": "አቅራቢ",
+        "api_key": "የ API ቁልፍ",
+        "save_key": "ቁልፍ አስቀምጥ",
+        "language": "ቋንቋ",
+        "chips_dark": "የትኞቹ አካባቢዎች ደካማ ናቸው?",
+        "chips_restock": "ምን እንድንሞላ?",
+        "chips_dispatch": "ቫን ይውጣ?",
+        "chips_kiosk": "ኪዮስክ እንዴት እጨምራለሁ?",
+        "working_offline": "እስከ ቁልፍ ወይም Ollama ድረስ ያለ ሞዴል እየሰራሁ ነው።",
+    },
+}
+
+
+def t(key: str, language: str = "en") -> str:
+    lang = "am" if language in ("am", "amh", "amharic") else "en"
+    return STRINGS.get(lang, STRINGS["en"]).get(key, STRINGS["en"].get(key, key))

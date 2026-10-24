@@ -1,0 +1,19 @@
+{
+  "cpu": {
+    "cores": 8,
+    "memory": 32,
+    "type": "Intel Xeon"
+  },
+  "gpu": {
+    "count": 1,
+    "memory": 16,
+    "type": "NVIDIA T4"
+  },
+  "storage": {
+    "capacity": 1000,
+    "type": "SSD"
+  },
+  "network": {
+    "bandwidth": "10Gbps"
+  }
+}

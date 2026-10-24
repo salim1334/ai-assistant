@@ -1,0 +1,28 @@
+{
+  "name": "Sample Business",
+  "industry": "Retail",
+  "size": "Medium",
+  "annual_revenue": 5000000,
+  "employees": 120,
+  "data_maturity": "Intermediate",
+  "tech_stack": [
+    "Python",
+    "SQL",
+    "Tableau",
+    "AWS"
+  ],
+  "business_objectives": [
+    {
+      "name": "Increase Sales",
+      "priority": "High"
+    },
+    {
+      "name": "Reduce Costs",
+      "priority": "Medium"
+    },
+    {
+      "name": "Improve Customer Satisfaction",
+      "priority": "High"
+    }
+  ]
+}

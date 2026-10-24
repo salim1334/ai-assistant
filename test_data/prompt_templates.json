@@ -1,0 +1,5 @@
+{
+  "data_analysis": "Analyze the following data and provide insights: {data}",
+  "model_explanation": "Explain the following model results in simple terms: {results}",
+  "recommendation": "Based on the analysis, recommend actions for: {objective}"
+}

@@ -1,0 +1,19 @@
+{
+  "data_processing": {
+    "cpu_cores": 4,
+    "memory": 16,
+    "priority": "high"
+  },
+  "model_training": {
+    "cpu_cores": 6,
+    "gpu_memory": 12,
+    "memory": 24,
+    "priority": "high"
+  },
+  "inference": {
+    "cpu_cores": 2,
+    "gpu_memory": 4,
+    "memory": 8,
+    "priority": "medium"
+  }
+}

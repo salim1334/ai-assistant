@@ -1,0 +1,75 @@
+:root {
+  --bg: #f6f1e8;
+  --ink: #1c1917;
+  --muted: #57534e;
+  --card: #fffdf8;
+  --accent: #0f766e;
+  --accent-ink: #fff;
+  --err: #b45309;
+  font-family: "Segoe UI", "Noto Sans Ethiopic", sans-serif;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-size: 20px;
+  line-height: 1.45;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  gap: 1rem;
+}
+h1 { font-size: 1.4rem; margin: 0; }
+h2 { font-size: 1.25rem; }
+main { max-width: 40rem; margin: 0 auto; padding: 0 1.25rem 3rem; }
+.screen { background: var(--card); border-radius: 16px; padding: 1.25rem; box-shadow: 0 1px 8px rgba(0,0,0,.06); }
+.row { display: flex; gap: .5rem; margin-top: 1rem; }
+.row input, .stack input, select {
+  flex: 1;
+  font-size: 1.05rem;
+  padding: .7rem .8rem;
+  border: 1px solid #d6d3d1;
+  border-radius: 10px;
+}
+button {
+  font-size: 1.05rem;
+  padding: .7rem 1rem;
+  border: 0;
+  border-radius: 10px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  cursor: pointer;
+}
+button[hidden], [hidden] { display: none !important; }
+.log {
+  min-height: 8rem;
+  max-height: 18rem;
+  overflow: auto;
+  white-space: pre-wrap;
+  background: #fafaf9;
+  border-radius: 10px;
+  padding: .8rem;
+}
+.bar { height: 10px; background: #e7e5e4; border-radius: 99px; overflow: hidden; }
+#ready-bar { height: 100%; width: 5%; background: var(--accent); transition: width .3s; }
+.error { color: var(--err); }
+.chips, .cards { display: flex; flex-wrap: wrap; gap: .4rem; margin: .6rem 0; }
+.chip, .card {
+  background: #ecfdf5;
+  border-radius: 999px;
+  padding: .35rem .8rem;
+  font-size: .95rem;
+  cursor: pointer;
+  border: 0;
+  color: var(--ink);
+}
+.card { border-radius: 12px; display: block; width: 100%; text-align: left; cursor: default; }
+.stack { display: flex; flex-direction: column; gap: .6rem; margin-top: .6rem; }
+details { margin-top: 1rem; }
+pre { white-space: pre-wrap; font-size: .9rem; }
+.lang { font-size: .9rem; color: var(--muted); }
+code { display: block; background: #f5f5f4; padding: .6rem; border-radius: 8px; overflow-x: auto; font-size: .85rem; }

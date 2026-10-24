@@ -1,0 +1,13 @@
+{
+  "agent_type": "data_processing",
+  "capabilities": [
+    "data_cleaning",
+    "feature_engineering",
+    "data_transformation"
+  ],
+  "execution_mode": "batch",
+  "input_format": "csv",
+  "output_format": "parquet",
+  "logging_level": "info",
+  "max_runtime": 3600
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BDFG</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header class="top">
+    <h1 id="title">Your business assistant</h1>
+    <label class="lang">
+      <span id="lang-label">Language</span>
+      <select id="language">
+        <option value="en">English</option>
+        <option value="am">አማርኛ</option>
+      </select>
+    </label>
+  </header>
+
+  <main>
+    <section id="screen-ready" class="screen">
+      <h2 id="ready-heading">Getting ready</h2>
+      <p id="ready-msg">Finding a helper that fits this computer…</p>
+      <div class="bar"><div id="ready-bar"></div></div>
+      <p id="ready-error" class="error" hidden></p>
+      <div id="need-ollama" hidden>
+        <p id="install-hint"></p>
+        <code id="install-cmd"></code>
+        <button type="button" id="btn-install">Install Ollama</button>
+      </div>
+      <button type="button" id="btn-continue" hidden>Continue</button>
+    </section>
+
+    <section id="screen-setup" class="screen" hidden>
+      <h2 id="setup-heading">Let's set up your assistant</h2>
+      <p id="setup-hint">Answer in your own words. One question at a time.</p>
+      <div id="setup-log" class="log"></div>
+      <form id="setup-form" class="row">
+        <input id="setup-input" autocomplete="off" />
+        <button type="submit" id="setup-send">Send</button>
+      </form>
+      <button type="button" id="btn-start" hidden>Start my assistant</button>
+    </section>
+
+    <section id="screen-home" class="screen" hidden>
+      <h2 id="home-heading">Your assistant</h2>
+      <div id="chips" class="chips"></div>
+      <div id="moves" class="cards"></div>
+      <div id="chat-log" class="log"></div>
+      <form id="chat-form" class="row">
+        <input id="chat-input" autocomplete="off" />
+        <button type="submit" id="chat-send">Send</button>
+      </form>
+      <details>
+        <summary id="remember-label">What I remember</summary>
+        <pre id="memory"></pre>
+      </details>
+      <details>
+        <summary id="cloud-label">Use a cloud key (optional)</summary>
+        <form id="settings-form" class="stack">
+          <label><span id="provider-label">Provider</span>
+            <select id="provider">
+              <option value="openai">OpenAI</option>
+              <option value="anthropic">Anthropic</option>
+              <option value="gemini">Gemini</option>
+              <option value="local">This computer</option>
+            </select>
+          </label>
+          <label><span id="key-label">API key</span>
+            <input id="api-key" type="password" autocomplete="off" />
+          </label>
+          <button type="submit" id="save-key">Save key</button>
+        </form>
+      </details>
+    </section>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
